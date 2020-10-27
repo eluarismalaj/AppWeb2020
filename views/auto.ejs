@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>APP WEB</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--  wrapper -->
+    <div class="wrapper">
+        
+        <!-- Page Content  -->
+        <div id="contentUser">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-light bg-light">
+              
+              <!-- in alto a sinistra: NOMEAUTO-->
+              <a class="navbar-brand" href="#">
+                <img src="#" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                NomeAuto
+              </a>
+
+              <!-- MODAL AGGIUNGI NUOVO DISPOSITIVO-->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                AGGIUNGI DISPOSITIVO
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Inserisci tipo di dispositivo</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <!--scegli tipo di sipositivo-->
+                    <div class="input-group">
+                      <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>Choose...</option>
+                        <option value="1">Dispositivo A</option>
+                        <option value="2">Dispositivo B</option>
+                        <option value="3">Dispositivo C</option>
+                      </select>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">AGGIUNGI</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <!-- PARTE CENTRALE DELLA PAGINA-->
+            
+            <!-- Informazioni auto-->
+            <h2>Informazioni auto</h2>
+     
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Modello</th>
+                  <th scope="col">Targa</th>
+                  <th scope="col">Anno di Immatricolazione</th>
+                  <th scope="col">Dispositivi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Audi</td>
+                  <td>abcd</td>
+                  <td>2010</td>
+                  <td>Dispositivo A</td>
+                </tr>
+              </tbody>
+            </table>    
+
+            <!-- dati primo dispositivo -->
+            
+            <h2>Dati dispositivo N</h2>
+
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Velocità</th>
+                  <th scope="col">Autonomia</th>
+                  <th scope="col">Stato gomme</th>
+                  <th scope="col">Temperatura olio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>90 km/h</td>
+                  <td>90 km</td>
+                  <td>ok</td>
+                  <td>90 F</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- posizione-->
+
+            <h2>Posizione Auto</h2>
+
+            <div>
+              <figure class="figure">
+                <img src="..." class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">A caption for the above image.</figcaption>
+              </figure>
+            </div>
+
+            <!-- cancellazione auto-->
+
+            <h2>Cancella l'auto</h2>
+
+            <div class="container-fluid">
+              
+              <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label for="staticEmail2" class="sr-only">Email</label>
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                  <label for="inputPassword2" class="sr-only">Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Elimina Auto</button>
+              </form>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!--funzione che gestisce la sidebar-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>

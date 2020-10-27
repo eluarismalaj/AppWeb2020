@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>APP WEB</title>
+    <title>Index</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -68,7 +68,7 @@
                 
                 <!-- Contatti -->
                 <li>
-                    <a href="#">Contatti</a>
+                    <a href="#">Statistiche</a>
                 </li>
             </ul>
         </nav>
@@ -92,16 +92,11 @@
                     <!-- Altre opzioni Navbar-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            
-                          <!-- Statistiche-->
-                          <li class="nav-item active">
-                            <a class="nav-link" href="#">Statistiche<span class="sr-only">(current)</span></a>
-                          </li>
 
                            <!-- NUOVA AUTO-->
                            <li class="nav-item active">                            
                            <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                
+                                                             
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         
@@ -150,21 +145,7 @@
                             <div>
                                 <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Aggiungi Auto</a>
                             </div>
-                            </li>
-
-                          <!-- Dropdown se necessario (Opzioni) -->
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Opzioni
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Opzione 1</a>
-                              <a class="dropdown-item" href="#">Opzione 2</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Opzione 3</a>
-                            </div>
-                          </li>
-                        </ul>
+                            </li> 
                         
                         <!-- Cerca se necessario-->
                         <form class="form-inline my-2 my-lg-0">
@@ -263,6 +244,7 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+    <!--funzione che gestisce la sidebar-->
     <script type="text/javascript">
         $(document).ready(function () {
             $("#sidebar").mCustomScrollbar({
