@@ -25,113 +25,278 @@
 
     <!--  wrapper -->
     <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+          <!-- nome Sito-->
+          <div class="sidebar-header">
+              <h3>Progetto AppWeb</h3>
+          </div>
+
+          <!-- componenti sidebar-->
+          <ul class="list-unstyled components">
+              
+              <!-- nome utente-->
+              <p>user/amministratore</p>
+
+              <!-- Home -->
+              <li>
+                  <a href="#">Home</a>
+              </li>
+
+              <!-- dati personali -->
+              <li>
+                  <a href="#">Profilo</a>
+              </li>
+
+              <!-- Auto -->
+              <li class="active">
+                  <a href="#autoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Auto</a>
+                  <ul class="collapse list-unstyled" id="autoSubmenu">
+                      <li>
+                          <a href="#">Auto 1</a>
+                      </li>
+                      <li>
+                          <a href="#">Auto 2</a>
+                      </li>
+                      <li>
+                          <a href="#">Auto 3</a>
+                      </li>
+                  </ul>
+              </li>
+              
+              <!-- Le mie auto in vendita -->
+              <li>
+                <a href="#">Le mie auto in vendita </a>
+              </li>
+
+              <!-- Storico-->
+              <li>
+                <a href="#">Storico</a>
+              </li>
+
+              <!-- Auto un vendita-->
+              <li>
+                <a href="#">Auto un vendita</a>
+              </li>
+          </ul>
+        </nav>
+
         
         <!-- Page Content  -->
-        <div id="content2">
+        <div id="content">
 
-            <!-- Navbar -->
-            <nav class="navbar navbar-light bg-light">
-              <a class="navbar-brand" href="#">
-                <img src="#" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                NomeUtente
-              </a>
-              
-              <a class="navbar-brand" href="#">Home</a>
-              
-            </nav>
+              <!-- Navbar -->
+                       
+              <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"> 
+                <div class="container-fluid">
+
+                    <!-- Tasto Menu-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-align-justify"></i>
+                    </button>
+                    
+                    <!-- Button cambia informazioni -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cambiaInformazioni">
+                      Cambia Informazioni
+                    </button>
+
+                    <!-- Button cambia password -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cambiaPassword">
+                      Cambia Password
+                    </button>
+
+                    <!-- Button elimina profilo -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminaProfilo">
+                      Elimina profilo
+                    </button>
+
+                </div>
+                
+              </nav>
+
+              <!-- Modal cambia informazioni-->
+              <div class="modal fade" id="cambiaInformazioni" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="cambiaInformazioniLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    
+                    <!--Titolo-->
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="cambiaInformazioniLabel">Aggiorna informazioni</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  
+                    <!--scegli tipo di sipositivo-->
+                    <form action="/cambiainformazioni" method ="POST">
+                      
+                      <div class="modal-body">
+                        
+                        <!--label nome-->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                          </div>
+                          <input type="text" name="nome" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        
+                        <!--label cognome-->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Cognome</span>
+                          </div>
+                          <input type="text" name="cognome" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        
+                        <!--label e-mail-->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+                          </div>
+                          <input type="string" name="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+
+                        <!--label anno nascita-->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Anno di Nascita</span>
+                          </div>
+                          <input type="number" name="anno_nascita" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+
+                        <!--label città nascita-->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Città di Nascita</span>
+                          </div>
+                          <input type="text" name="citta_nascita" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+
+                      
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Aggiorna</button>
+                        </div>
+
+                    </div>
+                  
+                  </form>
+                
+                </div>
+              </div>
+            </div>
+
+              <!-- Modal cambia password-->
+              <div class="modal fade" id="cambiaPassword" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="cambiaPasswordLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- Titolo modal-->
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="cambiaPasswordLabel">Nuova password</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    <!--campi da riempire-->
+                    <form action="/cambiapassword" method= "POST">
+                    
+                      <div class="modal-body">
+                        <!--label email-->
+                        <div class="form-group row">
+                          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                          </div>
+                        </div>
+                        <!--label password-->
+                        <div class="form-group row">
+                          <label for="inputPassword" class="col-sm-2 col-form-label">Nuova Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" name="password1" class="form-control" id="inputPassword">
+                          </div>
+                        </div>
+                        <!--label ripeti password-->
+                        <div class="form-group row">
+                          <label for="inputNuovaPassword" class="col-sm-2 col-form-label">Ripeti Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" name="password2" class="form-control" id="inputNuovaPassword">
+                          </div>
+                        </div>
+
+                      </div>
+                    
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Aggiorna</button>
+                      </div>
+                      
+                    </form>
+                 
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal elimina profilo-->
+              <div class="modal fade" id="eliminaProfilo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="eliminaProfiloLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <!-- Titolo modal-->
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="eliminaProfiloLabel">Elimina Profilo</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    
+                    <!--campi da riempire-->
+                    <form action="/eliminaprofilo" method= "POST">
+                      <div class="modal-body">
+                        <span>Sicuro di voler eliminare il profilo. Questa azione non è reversibile!</span>
+                      </div>
+      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-danger">Elimina</button>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
 
             <!-- PARTE CENTRALE DELLA PAGINA-->
+            
+
+            <!-- Informazioni utente-->
+            <h2>Le tue Informazioni</h2>
+
+            <ul class="list-group">
+              <li class="list-group-item">Nome : AAA</li>
+              <li class="list-group-item">Cognome : BBB</li>
+              <li class="list-group-item">e-mail : abc@gmail.com</li>
+              <li class="list-group-item">Anno Di Nascita : 1995</li>
+              <li class="list-group-item">Ciità di Nascita: Treviso</li>
+            </ul>
+
+            <!-- Informazioni auto-->
             <h2>Le tue Auto</h2>
 
-            <!-- Tabella Auto-->
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Auto</th>
-                  <th scope="col">Targa</th>
-                  <th scope="col">DataInizio</th>
-                  <th scope="col">DataFine</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Audi</td>
-                  <td>abcd</td>
-                  <td>a</td>
-                  <td>b</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Fiat</td>
-                  <td>abcd</td>
-                  <td>a</td>
-                  <td>b</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>BMW</td>
-                  <td>abcd</td>
-                  <td>a</td>
-                  <td>b</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- cambia paswword-->
-            <h2>Nuova Password</h2>
-            
-            <div class="container-fluid">
-              
-              <form>
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Nuova Password</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Ripeti Password</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword">
-                  </div>
-                </div>
-              </form>
-
-            </div>
-
-            <!-- cancellazione profilo-->
-
-            <h2>Cancella il profilo</h2>
-
-            <div class="container-fluid">
-              
-              <form class="form-inline">
-                <div class="form-group mb-2">
-                  <label for="staticEmail2" class="sr-only">Email</label>
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-                </div>
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="inputPassword2" class="sr-only">Password</label>
-                  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Elimina Profilo</button>
-              </form>
-
-            </div>
-
-
-
-        </div>
+            <ul class="list-group">
+              <li class="list-group-item">Marca auto : Audi</li>
+              <li class="list-group-item">Modello auto : A3</li>
+              <li class="list-group-item">Targa : AB54BV</li>
+              <li class="list-group-item">Anno Di Immatricolazione : 2015</li>
+              <li class="list-group-item">Descrizione: Audi A3 del 2015</li>
+            </ul>
+      </div>
+        
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->

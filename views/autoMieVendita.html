@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Le mie auto in vendita</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--  wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+          <!-- nome Sito-->
+          <div class="sidebar-header">
+              <h3>Progetto AppWeb</h3>
+          </div>
+
+          <!-- componenti sidebar-->
+          <ul class="list-unstyled components">
+              
+              <!-- nome utente-->
+              <p>user/amministratore</p>
+
+              <!-- Home -->
+              <li>
+                  <a href="#">Home</a>
+              </li>
+
+              <!-- dati personali -->
+              <li>
+                  <a href="#">Profilo</a>
+              </li>
+
+              <!-- Auto -->
+              <li class="active">
+                  <a href="#autoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Auto</a>
+                  <ul class="collapse list-unstyled" id="autoSubmenu">
+                      <li>
+                          <a href="#">Auto 1</a>
+                      </li>
+                      <li>
+                          <a href="#">Auto 2</a>
+                      </li>
+                      <li>
+                          <a href="#">Auto 3</a>
+                      </li>
+                  </ul>
+              </li>
+              
+              <!-- Le mie auto in vendita -->
+              <li>
+                <a href="#">Le mie auto in vendita </a>
+              </li>
+
+              <!-- Storico-->
+              <li>
+                <a href="#">Storico</a>
+              </li>
+
+              <!-- Auto un vendita-->
+              <li>
+                <a href="#">Auto un vendita</a>
+              </li>
+          </ul>
+        </nav>
+
+        
+        <!-- Page Content  -->
+        <div id="content">
+
+              <!-- Navbar -->
+                       
+              <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"> 
+                <div class="container-fluid">
+
+                    <!-- Tasto Menu-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+              
+                    <!-- Cerca se necessario-->
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="..." aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+                    </form>
+              </nav>
+
+
+            <!-- PARTE CENTRALE DELLA PAGINA-->
+            <h2>Tutte le auto</h2>
+
+            <!-- Tabella Auto-->
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Auto</th>
+                  <th scope="col">Targa</th>
+                  <th scope="col">AnnoImmatricolazione</th>
+                  <th scope="col">Proprietario</th>
+                  <th scope="col">Offerta</th>
+                  <th scope="col">Risposta</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Audi</td>
+                  <td>abcd</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>5000</td>
+                  <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rispondiofferta">
+                      Rispondi
+                    </button>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Audi</td>
+                  <td>abcd</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>5000</td>
+                  <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rispondiofferta">
+                      Rispondi
+                    </button>
+                  </td>
+
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Audi</td>
+                  <td>abcd</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>5000</td>
+                  <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rispondiofferta">
+                      Rispondi
+                    </button>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Modal rispondi offerta-->
+            <div class="modal fade" id="rispondiofferta" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="rispondioffertaLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!--Titolo-->
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="rispondioffertaLabel">Scegli il dispositivo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--scegli tipo di sipositivo-->
+                  <form action="/rispondiofferta" method ="POST">
+                    
+                    <input type = "hidden" name="carId" value ="idautoejs"/>
+                    <div class="input-group">
+                      <select class="custom-select" name = "idDispositivo" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>Scegli...</option>
+                        <option value="idDispositivo1">SI</option>
+                        <option value="2">NO</option>
+                      </select>
+                  
+                      <div class="input-group-append">
+                        <button type = "submit" class="btn btn-outline-secondary" type="button">Rispondi</button>
+                      </div>
+                    </div>
+                  </form>
+                
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!--funzione che gestisce la sidebar-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
